@@ -1,0 +1,31 @@
+.go_top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    width: 3rem;
+    height: 3rem;
+    color: rgb(255, 255, 255);
+    background-color: var(--btn-color);
+    box-shadow: var(--shadow-color);
+    border-radius: 50%;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    z-index: 999;
+    cursor: pointer;
+    background: linear-gradient(135deg, rgba(127, 39, 156, 1) 0%, rgba(46, 39, 157, 1) 100%);
+}
+
+.gototop {
+    animation: go_top 1.2s linear infinite alternate-reverse;
+}
+
+@keyframes go_top {
+    0% {
+        transform: translateY(-0.5rem);
+    }
+    100% {
+        transform: translateY(1rem);
+    }
+}

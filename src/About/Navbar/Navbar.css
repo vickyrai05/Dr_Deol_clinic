@@ -1,0 +1,143 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    
+  
+}
+.navbar {
+    width: 100%;
+    max-width: 1440px; /* Set a max-width for desktop */
+    margin: 0 auto; /* Center the div */
+    box-sizing: border-box;
+    background-image: url("../Navbar/video-file/h3.png");
+    box-shadow: #c8c4c4 0 0 10px;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+    .responsive-div {
+        max-width: none; /* Remove max-width for mobile */
+    }
+}
+
+
+a{
+    text-decoration: none;
+}
+button{
+    border: 0;
+    outline: none;
+    font-family: inherit;
+    font-size:inherit;
+    cursor:pointer;
+}
+.navbar{
+    height: 130px;
+    background-color: #f4f2f2;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.menu-links {
+    display: flex;
+    gap: 24px;
+    border-right: 1px solid #999999;
+    padding-inline: 24px;
+}
+.menu-links a{
+    font-weight: 500;
+    color: #060606;
+    padding: 8px, 16px;
+}
+.menu-links a:hover{
+    color: #0aa5ff; 
+}
+.menu-btn i{
+    color: #111010;
+    width: 80px;
+}
+.log-in{
+    font-weight: 500;
+    padding: 12px 22px;
+    background-color: transparent;
+    color: #111010;
+    border-radius: 10px;
+    border:2px solid #0aa5ff;
+    transition: 0.2s;
+}
+.log-in:hover{
+    background-color: #0aa5ff;
+    color: white;
+}
+.menu-btn{
+    font-size: 32px;
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+/* ... (your existing styles) */
+
+/* Media query for mobile devices */
+@media (max-width: 53rem) {
+    .menu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      background-color: #ffffff;
+      box-shadow: #c8c4c4 0 0 10px;
+      z-index: 1000;
+    }
+  
+    .menu-open {
+      .menu {
+        display: flex;
+      }
+    }
+  
+    .menu-links {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding-inline: 0;
+      border-right: none;
+      width: 100%;
+    }
+  
+    .menu-btn {
+      display: block;
+    }
+  }
+  
+
+ 
+/* Default styles for desktop */
+.logo img {
+    width: 200px; /* Adjust the width as needed for desktop view */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Media query for mobile devices */
+  @media (max-width: 768px) {
+    .logo img {
+      width: 100%; /* Make the image fill the container on smaller screens */
+    }
+  }
+  

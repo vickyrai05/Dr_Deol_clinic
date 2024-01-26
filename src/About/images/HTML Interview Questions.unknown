@@ -1,0 +1,108 @@
+HTML Interview Questions
+
+1. What is HTML?
+Ans: 
+1. HTML stands for hyper text markup language.
+2. HTML is markup language used to structure content on the web.
+3. HTML uses tags to define  elements. tags are enclosed  in angle bracket, like <tag>
+4. HTML provide the structure for web document, including headings, paragraphs, list, links, images,and more.
+5. It includs semantic tags that convey the meaning of content, such as <header>, <footer> <article> etc.
+6. HTML 5 is the latest version with new feature.
+
+2. What are the features of HTML?
+Ans: 
+1. HTML is markup language used to structure content on web by using a set of predefined tags.
+2. It provide a standardized way to organize content using element such as headings paragraphs, list etc.
+3. HTML supports Hyperlinks, allowing the creation of linkes between different web pages or resoures.
+4. HTML includes form elements for collecting user input, such as text field, button checkbox, and radio button.
+
+3. What is an element in HTML?
+Ans:
+1. HTML elements are defined by tags enclosed  in angle brackets ('<>').
+2. HTML elements can have attributes for additional information, in name-value pair with in the opening tag.
+3. HTML elements contain infomation between opening and closing tags; it could be text, other elements or a combination.
+4. HTMl elements can be nested inside each other.
+
+4. What is a tag for in HTML?
+Ans:
+1. HTML tags define the structure of an HTML document.
+2. HTML most tags come in opening and closing pairs, marking the beginning and end of an element
+3. HTML tags can be nested to create a hierarchy of elements 
+4. HTML tags may have attributes for additional information.
+5. HTML tags  have some common tags:
+   <HTML>: Represnts the root of an HTML document
+    <HEAD>: Contain meta infomation about the HTML document
+     <TITLE>: Sets the title of the HTML document
+        <BODY>: Contain the content  of the HTML document
+6. In HTML some tags are emtpy, meaning they don't a closing tag. 
+They self-close with a slash before the closing angle bracket.for example <br />, <img src="image.jpg" />
+
+5.What is the difference between HTML elements and tags?
+Ans: Tag:
+1. A tag is specific syntaxin HTML represnted by an opening and closing pair of angle brackets ('<and>').
+2. Tags are used to define the start and end of an HTML element.
+3. Tags can be self closing or have content  between the opening and closing tags.
+example: 
+<p>This is a paragraph.</p>
+<img src="image.jpg" alt="An image" />
+
+Element:
+1. Element consists of the entire set of tags, including the content between the opening and closing tags.
+2. Element are the building blocks  of an HTML document and reprsent different parts of the document's structure.
+example:
+<p>This is a paragraph.</p>
+<img src="image.jpg" alt="An image" />
+
+In this exmaple <p>This is a paragraph</p> and <img src="image.jpg" alt="An Image" /> are complete elements.
+
+6. Write the basic structure of the HTML template.
+Ans: Basic structure of the HTML teamplate is:
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+</body>
+</html>
+
+7. What are HTML Attributes?
+Ans:
+1. HTMl attributes provide additional infomation about HTML elements.They are included in opening tag of an element.
+2. Attributes? typically written as name-value pairs within the opening tag, separated by an equal sign ('=') 
+   for example: <tagname attribute="value">.
+3. Some attributes are common arcoss various HTML element.
+   example: id, class, style and src.
+ID Arttribute:
+1. ID attribute provides a unique identifer for an HTML element within a page. It must be unique, 
+   meaning no two element should have the same ID within the same document.
+example: 
+<img src="image.jpg" alt="An image" id="myImage" />
+
+Class Arttribute:
+1. Class arttribute is used to assign one or more class name to an element.
+  It allow for styling multiple element with the same style. 
+example: 
+<img src="image.jpg" alt="An image" class="myImage" />
+
+Style Attribute:
+1. Style attribute allow inline styling, specifying CSS propoerties and values directly within the HTML element.
+example: 
+<p style="color: red;">This is a paragraph.</p>
+
+Src Attribute:
+1. Src used in element like <img> and <script> the src attribute define the source URL of external resources like image and srcipt.
+example: 
+<img src="image.jpg" alt="An image" />
+
+Event Attribute:
+1. Event attribute like  onclick, onmousemove, onmouseover and onchange are used to attach javasrcript code to specific 
+  events tirggered by user action
+example: 
+<a href="https://www.w3schools.com" onclick="alert('Hello World!')">Click me!</a>
+
+
+

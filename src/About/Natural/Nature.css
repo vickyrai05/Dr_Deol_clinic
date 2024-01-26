@@ -1,0 +1,360 @@
+
+.responsive-container {
+  width: 100%;
+  max-width: 100%;
+  height: 800px;
+  margin: 0 auto;
+  background-color:  #ffffff;
+}
+
+@media (min-width: 768px) {
+  /* Adjust styles for screens 768px and wider (typical tablets and desktops) */
+  .responsive-container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Adjust styles for screens 992px and wider (typical desktops) */
+  .responsive-container {
+    max-width: 992px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Adjust styles for screens 1200px and wider (large desktops) */
+  .responsive-container {
+    max-width: 1200px;
+  }
+}
+:root {
+    --box-x-padding: 2rem;
+    --box-y-padding: 2rem;
+  }
+  
+  @media (min-width: 40em) {
+    :root {
+      --box-y-padding: 4rem;
+    }
+  }
+  
+  @media (min-width: 60em) {
+    :root {
+      --box-x-padding: 3rem;
+      --box-y-padding: 6rem;
+    }
+  }
+ 
+  
+  @media (min-width: 40em) {
+    section {
+      display: grid;
+      grid-template-rows: repeat(3, auto);
+      grid-template-columns: 4fr 4fr 5fr;
+      grid-template-areas: '. . title' 'img img content' 'img img .';
+      max-width: 1000px;
+      margin-right: auto;
+      margin-left: auto;
+      box-shadow: #c8c4c4 0 0 10px;
+      border-radius: 10px;
+      margin-top: 50px;
+    }
+  
+    section::after {
+      content: '';
+      grid-column: 2/-1;
+      grid-row: 1/3;
+      position: relative;
+      z-index: -1;
+      background: #810808;
+      box-shadow: 0 0.2em 1em rgba(61, 48, 41, 0.2);
+    }
+  
+    h1 {
+      grid-area: title;
+      padding-top: var(--box-y-padding);
+      padding-left: var(--box-x-padding);
+    }
+  
+    .content {
+      grid-area: content;
+      padding-bottom: var(--box-y-padding);
+      padding-left: var(--box-x-padding);
+      padding-right: var(--box-x-padding);
+    }
+  
+    .img {
+      grid-area: img;
+      position: relative;
+    }
+  }
+  
+  @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+  
+  html {
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    background-color: #f5f5f5;
+  }
+  
+  body {
+    padding: 1em;
+  }
+  
+  h1 {
+    font-size: 4em;
+    margin: 0 0 1rem;
+    font-family: serif;
+    position: relative;
+  }
+  
+  h1::after {
+    content: '';
+    position: absolute;
+    width: 6rem;
+    background-color: #ccc;
+    height: 2px;
+    top: 0;
+    left: 0;
+  }
+  
+  @media (min-width: 40em) {
+    h1::after {
+      left: var(--box-x-padding);
+      top: var(--box-y-padding);
+    }
+  }
+  
+  .content {
+    color: #4d4d4d;
+    margin-bottom: var(--box-y-padding);
+  }
+  
+  @media (min-width: 40em) {
+    .content {
+      margin-bottom: 0;
+    }
+  }
+  
+  p {
+    margin-top: 0;
+    margin-bottom: var(--box-y-padding);
+    line-height: 1.5;
+  }
+  
+  .content a {
+    text-decoration: none;
+    border: 1px solid #b3b3b3;
+    border-radius: 1em;
+    padding: 1em 2em;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: inherit;
+    display: inline-block;
+    background-color: #fff;
+  }
+  
+  .img a {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  
+  img {
+    max-width: 100%;
+    vertical-align: middle;
+    box-shadow: 0 0.2em 1.2em rgba(61, 48, 41, 0.1);
+  }
+  
+  .attribution {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #ea4c89;
+    color: #fff;
+    padding: 0.5em 1em;
+  }
+
+  .attribution a {
+    color: #fff;
+  }  
+  .card {
+    width: 280px;
+    height: 280px;
+    background: white;
+    border-radius: 32px;
+    padding: 3px;
+    position: relative;
+    box-shadow: #604b4a30 0px 70px 30px -50px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .card .mail {
+    position: absolute;
+    right: 2rem;
+    top: 1.4rem;
+    background: transparent;
+    border: none;
+  }
+  
+  .card .mail svg {
+    stroke: #fbb9b6;
+    stroke-width: 3px;
+  }
+  
+  .card .mail svg:hover {
+    stroke: #f55d56;
+  }
+  
+  .card .profile-pic {
+    position: absolute;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    top: 3px;
+    left: 3px;
+    border-radius: 29px;
+    z-index: 1;
+    border: 0px solid #fbb9b6;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out 0.2s, z-index 0.5s ease-in-out 0.2s;
+  }
+  
+  .card .profile-pic img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    -o-object-position: 0px 0px;
+    object-position: 0px 0px;
+    transition: all 0.5s ease-in-out 0s;
+  }
+  
+  .card .profile-pic svg {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: 0px 0px;
+    object-position: 0px 0px;
+    transform-origin: 45% 20%;
+    transition: all 0.5s ease-in-out 0s;
+  }
+  
+  .card .bottom {
+    position: absolute;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    background: #fbb9b6;
+    top: 80%;
+    border-radius: 29px;
+    z-index: 2;
+    box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px inset;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  }
+  
+  .card .bottom .content {
+    position: absolute;
+    bottom: 0;
+    left: 1.5rem;
+    right: 1.5rem;
+    height: 160px;
+  }
+  
+  .card .bottom .content .name {
+    display: block;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .card .bottom .content .about-me {
+    display: block;
+    font-size: 0.9rem;
+    color: white;
+    margin-top: 1rem;
+  }
+  
+  .card .bottom .bottom-bottom {
+    position: absolute;
+    bottom: 1rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .card .bottom .bottom-bottom .social-links-container {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .card .bottom .bottom-bottom .social-links-container svg {
+    height: 20px;
+    fill: white;
+    filter: drop-shadow(0 5px 5px rgba(165, 132, 130, 0.1333333333));
+  }
+  
+  .card .bottom .bottom-bottom .social-links-container svg:hover {
+    fill: #f55d56;
+    transform: scale(1.2);
+  }
+  
+  .card .bottom .bottom-bottom .button {
+    background: white;
+    color: #fbb9b6;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.6rem;
+    padding: 0.4rem 0.6rem;
+    box-shadow: rgba(165, 132, 130, 0.1333333333) 0px 5px 5px 0px;
+  }
+  
+  .card .bottom .bottom-bottom .button:hover {
+    background: #f55d56;
+    color: white;
+  }
+  
+  .card:hover {
+    border-top-left-radius: 55px;
+  }
+  
+  .card:hover .bottom {
+    top: 20%;
+    border-radius: 80px 29px 29px 29px;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+  }
+  
+  .card:hover .profile-pic {
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+    z-index: 3;
+    border: 7px solid #fbb9b6;
+    box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px;
+    transition: all 0.5s ease-in-out, z-index 0.5s ease-in-out 0.1s;
+  }
+  
+  .card:hover .profile-pic:hover {
+    transform: scale(1.3);
+    border-radius: 0px;
+  }
+  
+  .card:hover .profile-pic img {
+    transform: scale(2.5);
+    -o-object-position: 0px 25px;
+    object-position: 0px 25px;
+    transition: all 0.5s ease-in-out 0.5s;
+  }
+  
+  .card:hover .profile-pic svg {
+    transform: scale(2.5);
+    transition: all 0.5s ease-in-out 0.5s;
+  }
