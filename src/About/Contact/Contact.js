@@ -6,6 +6,7 @@ import { MdOutlineWifiCalling3 } from "react-icons/md";
 import { CgMail } from "react-icons/cg";
 import { TbWorldSearch } from "react-icons/tb";
 import swal from 'sweetalert';
+import emailjs from 'emailjs-com';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -13,6 +14,7 @@ function Contact() {
     email: "",
     number: "",
     date: "",
+    message: "",
   });
 
   const handleInputChange = (e) => {
@@ -24,42 +26,95 @@ function Contact() {
     e.preventDefault();
 
     // Validate the form fields
-    if (!formData.name.trim() || !formData.email.trim() || !formData.number.trim() || !formData.date.trim()) {
+    if (!formData.name.trim() || !formData.email.trim() || !formData.number.trim() || !formData.date.trim() || !formData.message.trim()) {
       alert("All fields are required");
       return;
     }
 
-    // Make an API call using Axios to store the form data
+    const serviceId = 'service_b6r4z0e';
+    const templateId = 'template_aswo4uj';
+    const publicKey = 'U5VuUtayG06uZ9LCV';
+    console.log('formData.email', formData.email);
+    const templateParams = {
+      to_name: 'Sachin',
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: 'Appointment Request',
+      phone_number: formData.number,
+      appointment_date: formData.date,
+      message: formData.message,
+     
+    };
+    console.log('formData.email', formData.email);
+    console.log('templateParams', templateParams);
+
     try {
-      const response = await axios.post("http://localhost:5001/user", formData);
+      console.log('templateParams', templateParams)
+      const response = await emailjs.send(serviceId, templateId, templateParams, publicKey, { debug: true });
 
-      if (response.status === 201) {
-        // Successful API call, handle accordingly (e.g., show success message)
-        console.log("Form data submitted:", formData);
-        swal({
-          title: "Good job!",
-          text: "Form submitted successfully!",
-          icon: "success",
-        });
+      console.log('Email sent:', response);
 
-        // Reset the form fields
-        setFormData({
-          name: "",
-          email: "",
-          number: "",
-          date: "",
-        });
-      } else {
-        // Handle errors from the API
-        console.error("Error submitting form:", response.statusText);
-        alert("Error submitting form. Please try again.");
-      }
+      swal({
+        title: 'Good job!',
+        text: 'Form submitted successfully! An email has been sent.',
+        icon: 'success',
+      });
+
+      setFormData({
+        name: '',
+        email: '',
+        number: '',
+        date: '',
+        message: '',
+      });
     } catch (error) {
-      // Handle network errors or errors thrown by axios
-      console.error("Error submitting form:", error.message);
-      alert("Error submitting form. Please try again.");
+      console.error('Error sending email:', error);
+      console.log('Error message:', error.message);
+      alert('Error submitting form. Please try again.');
     }
+
   };
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+
+  //   // Validate the form fields
+  //   if (!formData.name.trim() || !formData.email.trim() || !formData.number.trim() || !formData.date.trim()) {
+  //     alert("All fields are required");
+  //     return;
+  //   }
+
+  //   // Make an API call using Axios to store the form data
+  //   try {
+  //     const response = await axios.post("http://localhost:5001/user", formData);
+
+  //     if (response.status === 201) {
+  //       // Successful API call, handle accordingly (e.g., show success message)
+  //       console.log("Form data submitted:", formData);
+  //       swal({
+  //         title: "Good job!",
+  //         text: "Form submitted successfully!",
+  //         icon: "success",
+  //       });
+
+  //       // Reset the form fields
+  //       setFormData({
+  //         name: "",
+  //         email: "",
+  //         number: "",
+  //         date: "",
+  //       });
+  //     } else {
+  //       // Handle errors from the API
+  //       console.error("Error submitting form:", response.statusText);
+  //       alert("Error submitting form. Please try again.");
+  //     }
+  //   } catch (error) {
+  //     // Handle network errors or errors thrown by axios
+  //     console.error("Error submitting form:", error.message);
+  //     alert("Error submitting form. Please try again.");
+  //   }
+  // };
 
   return (
     <>
@@ -130,6 +185,20 @@ function Contact() {
                               />
                             </div>
                           </div>
+                          <div className="col-md-12">
+                            <div className="form-group">
+                              <textarea
+                                type="text"
+                                className="form-control"
+                                name="message"
+                                onChange={handleInputChange}
+                                value={formData.message}
+                                placeholder="Message"
+                                required
+                              />
+                            </div>
+                          </div>
+
                           <div className="col-md-12">
                             <div className="form-group">
                               <input
