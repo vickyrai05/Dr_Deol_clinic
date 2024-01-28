@@ -60,7 +60,7 @@ const Footer = () => {
                 <ul className="list-unstyled social">
                   <li><a href="https://www.facebook.com/DrDeolHomeopathy?mibextid=rS40aB7S9Ucbxw6v" target="_blank"><span className="icon-facebook"><FaFacebook /></span></a></li>
                   <li><a href="https://www.instagram.com/drdeolhomoeopathic_clinic?igsh=YzVkODRmOTdmMw==" target="_blank" rel="noopener noreferrer"><span className="icon-twitter"><FaInstagram /></span></a></li>
-                  <li><a href="https://wa.me/7382325000" target="_blank" rel="noopener noreferrer"><span className="icon-linkedin"><SiWhatsapp /></span></a></li>
+                  <li><a href="tel:+917382325000" target="_blank" rel="noopener noreferrer"><span className="icon-linkedin"><SiWhatsapp /></span></a></li>
                   <li><a href='https://www.linkedin.com/in/dr-deol-homeopathy-37b604187' target="_blank" rel="noopener noreferrer"><span className="icon-paper-plane"><CiLinkedin /></span></a></li>
                 </ul>
               </div>

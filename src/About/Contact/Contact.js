@@ -13,7 +13,6 @@ function Contact() {
     name: "",
     email: "",
     number: "",
-    date: "",
     message: "",
   });
 
@@ -26,7 +25,7 @@ function Contact() {
     e.preventDefault();
 
     // Validate the form fields
-    if (!formData.name.trim() || !formData.email.trim() || !formData.number.trim() || !formData.date.trim() || !formData.message.trim()) {
+    if (!formData.name.trim() || !formData.email.trim() || !formData.number.trim() || !formData.message.trim()) {
       alert("All fields are required");
       return;
     }
@@ -36,14 +35,13 @@ function Contact() {
     const publicKey = 'U5VuUtayG06uZ9LCV';
     console.log('formData.email', formData.email);
     const templateParams = {
-      to_name: 'Sachin',
+      to_name: 'Dr.Deol Homeopathy',
       from_name: formData.name,
       from_email: formData.email,
       subject: 'Appointment Request',
       phone_number: formData.number,
-      appointment_date: formData.date,
       message: formData.message,
-     
+
     };
     console.log('formData.email', formData.email);
     console.log('templateParams', templateParams);
@@ -64,7 +62,6 @@ function Contact() {
         name: '',
         email: '',
         number: '',
-        date: '',
         message: '',
       });
     } catch (error) {
@@ -163,7 +160,7 @@ function Contact() {
                           <div className="col-md-12">
                             <div className="form-group">
                               <input
-                                type="phone number"
+                                type="text"
                                 className="form-control"
                                 name="number"
                                 placeholder="Phone Number"
@@ -175,22 +172,12 @@ function Contact() {
                           </div>
                           <div className="col-md-12">
                             <div className="form-group">
-                              <input
-                                type="date"
-                                className="form-control"
-                                name="date"
-                                onChange={handleInputChange}
-                                value={formData.date}
-                                required
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-12">
-                            <div className="form-group">
                               <textarea
                                 type="text"
                                 className="form-control"
                                 name="message"
+                                cols="30"
+                                rows="3"
                                 onChange={handleInputChange}
                                 value={formData.message}
                                 placeholder="Message"
@@ -250,7 +237,7 @@ function Contact() {
                         <div className="text pl-3">
                           <p>
                             <span>Phone:</span>
-                            <a href="https://wa.me/7382325000" target="_blank" rel="noopener noreferrer"> 91-73823-25000</a>
+                            <a href="tel:+917382325000" target="_blank" rel="noopener noreferrer"> 91-73823-25000</a>
                           </p>
                         </div>
                       </div>
