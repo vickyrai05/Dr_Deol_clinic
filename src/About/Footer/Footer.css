@@ -19,25 +19,58 @@ body {
     position: relative;
     color: #fff;
     padding: 7rem 0;
-    background-color: #141d2a; }
+    background-color: #141d2a;
+   }
+
     .footer-20192 .container {
-      position: relative; }
+      position: relative; 
+    }
     .footer-20192 h3 {
       font-size: 16px;
       margin-bottom: 10px;
       margin-top: 0;
-      line-height: 1.5; }
+      line-height: 1.5;
+    
+    }
     .footer-20192 .links li {
       margin-bottom: 10px;
       line-height: 1.5;
-      display: block; }
+      display: block;
+     }
       .footer-20192 .links li a {
-        color: #666873; }
+        color: #666873;
+      }
         .footer-20192 .links li a:hover {
-          color: #fff; }
+          color: #fff; 
+        }
+        .footer-20192 .social ul{
+          margin-right: 10px;
+        }
     .footer-20192 .social li {
       display: inline-block;
-      position: relative; }
+      position: relative; 
+      margin-left: 10px;
+     
+    }
+    .footer-20192 .social li:nth-child(1) a:hover{
+      background-color:  #1877f2;
+     
+    }
+    .footer-20192 .social li:nth-child(2) a:hover{
+      background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+      background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+      overflow: hidden;
+    }
+    
+    
+    .footer-20192 .social li:nth-child(3) a:hover{
+      background-color:  #00ff00;
+    }
+    .footer-20192 .social li:nth-child(4) a:hover{
+      background-color: #0072b1;
+    }
       .footer-20192 .social li a {
         position: relative;
         width: 40px;
@@ -73,10 +106,16 @@ body {
         line-height: 1.5; }
       .footer-20192 .cta h3 {
         font-size: 20px; }
+ .b{
+  color: #ffffff;
+  font-size: 45px;
+  font-weight: 200;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-left: 10px;
+ }
  .v{
   color: #ffffff;
   font-size: 45px;
   font-weight: 200;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
- }
-       
+ }    

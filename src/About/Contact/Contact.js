@@ -250,7 +250,7 @@ function Contact() {
                         <div className="text pl-3">
                           <p>
                             <span>Phone:</span>
-                            <a href="https://wa.me/7382325000" target="_blank" rel="noopener noreferrer"> 91 73823-25000</a>
+                            <a href="https://wa.me/7382325000" target="_blank" rel="noopener noreferrer"> 91-73823-25000</a>
                           </p>
                         </div>
                       </div>

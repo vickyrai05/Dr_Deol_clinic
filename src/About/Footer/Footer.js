@@ -56,7 +56,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="col-md-3">
-                <h3 className='v'>Follow us</h3>
+                <h3 className='b'>Follow us</h3>
                 <ul className="list-unstyled social">
                   <li><a href="https://www.facebook.com/DrDeolHomeopathy?mibextid=rS40aB7S9Ucbxw6v" target="_blank"><span className="icon-facebook"><FaFacebook /></span></a></li>
                   <li><a href="https://www.instagram.com/drdeolhomoeopathic_clinic?igsh=YzVkODRmOTdmMw==" target="_blank" rel="noopener noreferrer"><span className="icon-twitter"><FaInstagram /></span></a></li>
