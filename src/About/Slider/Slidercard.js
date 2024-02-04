@@ -25,7 +25,7 @@ function Slidercard() {
               disease including jaundice, ymptoms of liver,cholestasis, liver enlargement, portal hypertension, esophageal varices, ascites, and more
             </p>
             <NavLink to='/contact' activeClassName='active-link'>
-            <button>Enquiry<svg viewBox="0 0 13 10" height="10px" width="15px">
+            <button>Enquiry Now<svg viewBox="0 0 13 10" height="10px" width="15px">
               <path d="M1,5 L11,5"></path>
               <polyline points="8 1 12 5 8 9"></polyline>
             </svg></button>

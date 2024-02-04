@@ -1,65 +1,6 @@
-/* CSS reset */
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
 
-body {
-  box-sizing: border-box;
-  position: relative;
-}
 
-html {
-  font-size: 62.5%;
-}
-
-/* Typography --------------------------------------------*/
-
-body {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 2rem;
-  text-align: center;
-}
-
-.heading {
-  margin-bottom: 3rem;
-}
-
-.body-text {
-  font-size: 1.6rem;
-  line-height: 2.5rem;
-  margin: 0 auto;
-  width: 70%;
-}
-
-.footer-text {
-  color: #fff;
-  font-size: 1.5rem;
-}
-
-/* Header --------------------------------------------*/
-
-.headerr {
-  margin: 0 auto;
-  padding: 3rem 0;
-  width: 65%;
-}
-
-/* Footer --------------------------------------------*/
-
-.footer {
-  background-color: #333;
-   margin-top: 3rem;
-  padding: 2rem 0;
-  width: 100%;
-}
-
-/* Grids --------------------------------------------*/
-
-.container {
+.container11 {
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: repeat(3, 1fr);
@@ -67,6 +8,7 @@ body {
   margin: 0 auto;
   max-width: 90%;
   padding: 3rem 0;
+  
 }
 
 /* Grid images --------------------------------------------*/
@@ -75,7 +17,8 @@ body {
   border-radius: 1rem;
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: fill;
+ 
 }
 
 /* Grid items --------------------------------------------*/
@@ -124,71 +67,6 @@ body {
   grid-row: 11/13;
 }
 
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  box-sizing: border-box;
-  position: relative;
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 2rem;
-  text-align: center;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-/* Typography --------------------------------------------*/
-
-.body-text {
-  font-size: 1.6rem;
-  line-height: 2.5rem;
-  margin: 0 auto;
-  width: 70%;
-}
-
-.footer-text {
-  color: #fff;
-  font-size: 1.5rem;
-}
-
-/* Header --------------------------------------------*/
-
-.headerr {
-  margin: 0 auto;
-  padding: 3rem 0;
-  width: 65%;
-}
-
-/* Footer --------------------------------------------*/
-
-.footer {
-  background-color: #333;
-  margin-top: 3rem;
-  padding: 2rem 0;
-  width: 100%;
-}
-
-/* Grids --------------------------------------------*/
-
-.container {
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: repeat(1, 1fr); /* Adjust the number of columns based on screen size */
-  grid-template-rows: auto; /* Adjust rows as needed */
-  margin: 0 auto;
-  max-width: 90%;
-  padding: 3rem 0;
-}
-
-
-
 /* Define grid rows for different screen sizes */
 @media (min-width: 768px) {
   .container {
@@ -222,7 +100,7 @@ html {
   max-width: 100%;
   max-height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 0,0;
+  padding: 0;
   text-align: center;
   border: none;
 }

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../Contact/Contact.css";
-import axios from "axios"
 import { MdOutlineLocationOn } from "react-icons/md";
 import { MdOutlineWifiCalling3 } from "react-icons/md";
 import { CgMail } from "react-icons/cg";
@@ -72,47 +71,7 @@ function Contact() {
 
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   // Validate the form fields
-  //   if (!formData.name.trim() || !formData.email.trim() || !formData.number.trim() || !formData.date.trim()) {
-  //     alert("All fields are required");
-  //     return;
-  //   }
-
-  //   // Make an API call using Axios to store the form data
-  //   try {
-  //     const response = await axios.post("http://localhost:5001/user", formData);
-
-  //     if (response.status === 201) {
-  //       // Successful API call, handle accordingly (e.g., show success message)
-  //       console.log("Form data submitted:", formData);
-  //       swal({
-  //         title: "Good job!",
-  //         text: "Form submitted successfully!",
-  //         icon: "success",
-  //       });
-
-  //       // Reset the form fields
-  //       setFormData({
-  //         name: "",
-  //         email: "",
-  //         number: "",
-  //         date: "",
-  //       });
-  //     } else {
-  //       // Handle errors from the API
-  //       console.error("Error submitting form:", response.statusText);
-  //       alert("Error submitting form. Please try again.");
-  //     }
-  //   } catch (error) {
-  //     // Handle network errors or errors thrown by axios
-  //     console.error("Error submitting form:", error.message);
-  //     alert("Error submitting form. Please try again.");
-  //   }
-  // };
-
+  
   return (
     <>
 

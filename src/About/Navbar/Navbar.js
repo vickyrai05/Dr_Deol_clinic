@@ -32,6 +32,9 @@ function Navbar() {
             <NavLink to='/contact' activeClassName='active-link'>
               Appointment
             </NavLink>
+            <NavLink to='/QuoteFigure' activeClassName='active-link'>
+              Gallery
+            </NavLink>
           </div>
           {/* <NavLink to='/login'>
             <button className='log-in'>Log In</button>

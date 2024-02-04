@@ -10,7 +10,7 @@ import Signup from './About/register/Signup';
 import Navbar from './About/Navbar/Navbar';
 import Footer from './About/Footer/Footer';
  import GoTop from './About/To _the_Top/GoTop';
-
+ import QuoteFigure from './About/register/QuoteFigure';
 
 const WithHeader = ({ children }) => {
   return (
@@ -42,6 +42,10 @@ function App() {
         <Route
           path='/contact'
           element={<WithHeader><Contact /></WithHeader>} // Wrap Contact with WithHeader
+        />
+        <Route
+          path='/QuoteFigure'
+          element={<WithHeader><QuoteFigure /></WithHeader>} // Wrap Contact with WithHeader
         />
         <Route path='/login' element={<Login />} /> {/* Login page without header */}
         <Route
