@@ -40,7 +40,6 @@ function Contact() {
       subject: 'Appointment Request',
       phone_number: formData.number,
       message: formData.message,
-
     };
     console.log('formData.email', formData.email);
     console.log('templateParams', templateParams);
@@ -71,10 +70,8 @@ function Contact() {
 
   };
 
-  
   return (
     <>
-
       <section className="contact-section">
         <div className="container">
           <div className="row justify-content-center">
@@ -144,7 +141,6 @@ function Contact() {
                               />
                             </div>
                           </div>
-
                           <div className="col-md-12">
                             <div className="form-group">
                               <input
@@ -170,6 +166,7 @@ function Contact() {
                             <a
                               href="https://maps.google.com/?q=Mehta+Rd,+opposite+Dic+Office,+old,+Focal+Point,+GTB+Nagar,+Amritsar,+Amritsar+Cantt.,+Punjab+143001"
                               target="_blank"
+                              rel="noopener noreferrer"
                             >
                               <MdOutlineLocationOn />
                             </a>
@@ -178,9 +175,8 @@ function Contact() {
                         <div className="text pl-3">
                           <p>
                             <span>Address:</span>
-
                             <a href="https://maps.google.com/?q=Mehta+Rd,+opposite+Dic+Office,+old,+Focal+Point,+GTB+Nagar,+Amritsar,+Amritsar+Cantt.,+Punjab+143001"
-                              target='_blank'> Mehta Rd, opposite Dic Office, old, Focal Point,
+                              target='_blank' rel="noopener noreferrer"> Mehta Rd, opposite Dic Office, old, Focal Point,
                               GTB Nagar, Amritsar, Punjab 143001</a>
                           </p>
                         </div>
@@ -203,14 +199,14 @@ function Contact() {
                       <div className="dbox w-100 d-flex align-items-center">
                         <div className="icon d-flex align-items-center justify-content-center">
                           <span className="fa fa-paper-plane">
-                            <a href="mailto:deolsimrat27@gmail.com">
+                            <a href="mailto:deolsimrat27@gmail.com" target="_blank" rel="noopener noreferrer">
                               <CgMail />
                             </a></span>
                         </div>
                         <div className="text pl-3">
                           <p>
                             <span>Email:</span>
-                            <a href="mailto:deolsimrat27@gmail.com">
+                            <a href="mailto:deolsimrat27@gmail.com" target="_blank" rel="noopener noreferrer">
                               deolsimrat27@gmail.com
                             </a>
                           </p>
@@ -229,7 +225,6 @@ function Contact() {
                             <span>Website:</span>
                             <a href="https://www.google.com/search?q=DR.Deol+homeopathy.com" target="_blank" rel="noopener noreferrer" >DR.Deol homeopathy.com</a>
                           </p>
-
                         </div>
                       </div>
                     </div>
@@ -240,7 +235,6 @@ function Contact() {
           </div>
         </div>
       </section>
-
     </>
   );
 }

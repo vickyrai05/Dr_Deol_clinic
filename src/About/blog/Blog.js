@@ -6,10 +6,9 @@ import { NavLink } from 'react-router-dom';
 function Blog() {
   return (
     <>
-
       <div className="app">
         <header>
-          <a href="">
+          <a href="/">
             <img src={Sc1} alt="Earth News" />
           </a>
         </header>
@@ -18,11 +17,11 @@ function Blog() {
             Home
           </NavLink>
           <NavLink to='/blog' activeClassName='active-link'>
-              About
-            </NavLink>
-            <NavLink to='/contact' activeClassName='active-link'>
-              Contact Us
-            </NavLink>
+            About
+          </NavLink>
+          <NavLink to='/contact' activeClassName='active-link'>
+            Contact Us
+          </NavLink>
         </nav>
         <main>
           <h1><span>Dr.Deol<sub></sub><br></br>Homeopathy</span></h1>
@@ -30,10 +29,9 @@ function Blog() {
             the assumptions underlying homeopathy violate fundamental laws of nature.
             Homeopathy does not have any explanatory power and fails other criteria established for a scientific approach
           </p>
-          <a href="">Read full article</a>
+          <a href="/full-article">Read full article</a>
         </main>
       </div>
-
     </>
   );
 }
