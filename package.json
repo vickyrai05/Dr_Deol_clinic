@@ -1,5 +1,5 @@
 {
-  "name": "my-react-app",
+  "name": "DR_DEOL_CLINIC",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -46,5 +46,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.15.7"
   }
 }
