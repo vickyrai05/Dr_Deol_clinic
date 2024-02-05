@@ -6,7 +6,9 @@ function Blog() {
   return (
     <>
       <div className="app">
-        
+        <header>
+    
+        </header>
         <nav>
           <NavLink to='/' exact activeClassName='active-link'>
             Home
