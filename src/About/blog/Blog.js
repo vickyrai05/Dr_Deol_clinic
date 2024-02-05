@@ -1,17 +1,12 @@
 import React from 'react';
 import './Blog.css';
-import Sc1 from '../Carasusel.js/images/Sc1.png';
 import { NavLink } from 'react-router-dom';
 
 function Blog() {
   return (
     <>
       <div className="app">
-        <header>
-          <a href="/">
-            <img src={Sc1} alt="Earth News" />
-          </a>
-        </header>
+        
         <nav>
           <NavLink to='/' exact activeClassName='active-link'>
             Home
